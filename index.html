@@ -19,18 +19,20 @@
 
 	<script>
 		/* STEP 2: Bind the HEADER and the SECTION elements above to variables */
-		var header = document.querySelector('header');
-		var section = document.querySelector('section');
+		const header = document.querySelector('header');
+		const section = document.querySelector('section');
 
 		/* STEP 3: Store the URL of a JSON file in a variable */
-		var requestURL = 'tylerjlacroix.github.io/JSON-Lesson/js/i-scream.json';
+		const requestURL = 'tylerjlacroix.github.io/JSON-Lesson/js/i-scream.json';
 
 		/* STEP 4: Create a new XHR object */
-		
+		var request = new XMLHttpRequest();
 
 		/* STEP 5: Open a new request using the open() method */
+		request.open('GET', requestURL);
 
 		/* STEP 6: Set JavaScript to accept JSON from the server */
+		request.responseType = 'json';
 
 		/* STEP 7: Send the request with the send() method */
 
