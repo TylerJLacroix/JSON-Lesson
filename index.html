@@ -10,7 +10,7 @@
 
 <body>
 	<header>
-		
+
 	</header>
 	<section>
 
@@ -41,9 +41,17 @@
 		request.onload = function() {
 			var iScreamInc = request.response; 
 			console.log(iScreamInc);
+			populateHeader(iScreamInc);
+			showTopFlavours(iScreamInc);
 		}
 
 		/* STEP 9: Build out the populateHeader() function */
+		function populateHeader(obj) {
+			header.appendChild(
+				document.createElement('h1').innerHTML = obj.companyName);
+			header.appendChild(
+				document.createElement('h2').innerHTML = `Head office: ${obj.headOffice}, established in ${obj.established}`);
+		}
 
 		/* STEP 10a: Assemble the showTopFlavors() function */
 
