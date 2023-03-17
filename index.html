@@ -42,15 +42,17 @@
 			var iScreamInc = request.response; 
 			console.log(iScreamInc);
 			populateHeader(iScreamInc);
-			showTopFlavours(iScreamInc);
+			// showTopFlavours(iScreamInc);
 		}
 
 		/* STEP 9: Build out the populateHeader() function */
 		function populateHeader(obj) {
-			header.appendChild(
-				document.createElement('h1').innerHTML = obj.companyName);
-			header.appendChild(
-				document.createElement('h2').innerHTML = `Head office: ${obj.headOffice}, established in ${obj.established}`);
+			var h1 = document.createElement('h1');
+			h1.innerHTML = obj.companyName;
+			header.appendChild(h1);
+			var h2 = document.createElement('h2');
+			h2.innerHTML = `Head office: ${obj.headOffice}, established in ${obj.established}`;
+			header.appendChild(h2);
 		}
 
 		/* STEP 10a: Assemble the showTopFlavors() function */
